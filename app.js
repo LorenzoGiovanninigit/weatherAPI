@@ -9,7 +9,7 @@ const weather = document.getElementById("box-weather");
 async function getMeteo() {
   let cityInput = city.value;
   const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric&appid=312ec4308b49eb2608b97eb87fc8f9c6`
+    `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric&appid=312ec4308b49eb2608b97eb87fc8f9c6`
   );
   const fettched = await response.json();
   const desc = fettched.weather[0].description;
